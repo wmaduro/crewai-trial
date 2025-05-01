@@ -1,0 +1,5 @@
+crewai==0.63.0
+langchain-community
+ipykernel
+setuptools
+litellm

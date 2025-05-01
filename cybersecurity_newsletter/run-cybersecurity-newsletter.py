@@ -1,9 +1,16 @@
 from crewai import Agent, Task, Crew, Process
 from crewai.llm import LLM
+import os
+import dotenv
+
+dotenv.load_dotenv()
+
+# to change the ollama url, you can change the OLLAMA_URL environment variable at .env
+ollama_url = os.getenv("OLLAMA_URL", "http://localhost:11434")
 
 ollama_openhermes = LLM(
     model="openhermes",         # Nome do modelo que você tem localmente
-    base_url="http://localhost:11434",  # Default do Ollama
+    base_url=ollama_url,  # Default do Ollama
     api_key=None,               # Ollama não precisa de API Key
     custom_llm_provider="ollama"
 )

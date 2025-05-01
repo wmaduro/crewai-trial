@@ -1,4 +1,4 @@
-crewai==0.63.0
+crewai
 langchain-community
 ipykernel
 setuptools
